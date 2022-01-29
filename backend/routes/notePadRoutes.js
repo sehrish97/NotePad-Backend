@@ -8,7 +8,9 @@ router.get('/', (req,res)=>{
 
 router.get('/:id',(req,res)=>{
     const {id} = req.params
-    const newnote = notes.filter(item => item.id == id)
-    res.json(newnote).status(200)
+    console.log(id)
+
+    const singlenote = notes.filter(item => item.id == id)
+    res.json(singlenote).status(200)
 })
 module.exports = router;
