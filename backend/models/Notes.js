@@ -1,7 +1,7 @@
 
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const NotesSchema = new Schema({
+const NotesSchema = new mongoose.Schema({
     title:{
         type: String,
         required:true,
@@ -21,4 +21,4 @@ const NotesSchema = new Schema({
         default: Date.now
     }
 })
-module.exports = mongoose.model('notes',NotesSchema)
+module.exports = mongoose.model('Notes',NotesSchema)
